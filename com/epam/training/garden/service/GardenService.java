@@ -22,7 +22,6 @@ public class GardenService {
         PlantType tomato = new PlantType("Tomato", 0.3, 10);
         PlantType cucumber = new PlantType("Cucumber", 0.4, 10);
         this.setPlantTypes(Arrays.asList(corn, pumpkin, grape, tomato, cucumber));
-
     }
 
     public List<PlantType> getPlantTypes() {
