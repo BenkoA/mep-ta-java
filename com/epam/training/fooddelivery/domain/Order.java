@@ -12,7 +12,12 @@ public class Order {
     private BigDecimal totalPrice;
     private LocalDateTime orderDate;
 
-    public Order() {
+    public Order(long id, List<OrderItem> orderItems, long customerId, BigDecimal totalPrice, LocalDateTime orderDate) {
+        this.id = id;
+        this.orderItems = orderItems;
+        this.customerId = customerId;
+        this.totalPrice = totalPrice;
+        this.orderDate = orderDate;
     }
 
     public long getId() {
@@ -53,5 +58,16 @@ public class Order {
 
     public void setOrderDate(LocalDateTime orderDate) {
         this.orderDate = orderDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", orderItems=" + orderItems +
+                ", customerId=" + customerId +
+                ", totalPrice=" + totalPrice +
+                ", orderDate=" + orderDate +
+                '}';
     }
 }
